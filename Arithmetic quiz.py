@@ -15,9 +15,9 @@ def subtract(x, y):
 
    return x - y
 
-def divide(x, y):
+def multiply(x, y):
 
-   return x / y
+   return x * y
 
 NAME = input("Hello, \nWhat is your name? ")
 print("Welcome to this maths quiz", NAME, "Good luck")
@@ -33,15 +33,14 @@ while question <= 10:
     elif operator == 2:
       print(number1,"-",number2)
     elif operator == 3:
-      print(number1,"/",number2)
+      print(number1,"*",number2)
 
     if operator == 1:
        ans = add(number1,number2)
     elif operator == 2:
       ans = subtract(number1,number2)
     elif operator == 3:
-      ans = divide(number1,number2)
-      
+      ans = multiply(number1,number2)
 
     answer = int(input())
     

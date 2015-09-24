@@ -1,6 +1,16 @@
 # Computer-Science
 Computer Science Work
 
-always read the licence before using the code.
+## Contents
+* [License](https://github.com/JoeClarke12/Computer-Science/blob/master/README.md#license)
+* [Credits](https://github.com/JoeClarke12/Computer-Science/blob/master/README.md#credits)
 
-thanks
+---
+
+## License
+Always read the licence before using the code.
+
+## Credits
+* [Alfie 'A1fus' Bowman](gitub.com/a1fus)
+  * Did lots of awesome codes
+

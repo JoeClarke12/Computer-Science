@@ -1,6 +1,10 @@
 # Computer-Science
 Computer Science Work
 
-always read the licence before using the code.
+## License
+Always read the licence before using the code.
 
-thanks
+## Credits
+* [Alfie 'A1fus' Bowman](gitub.com/a1fus)
+  * Did lots of awesome codes
+

@@ -2,11 +2,11 @@ import time
 import random
 
 question = 1
-number1 = 1
-number2 = 1
-o = 1
+numberTwo = 1
+numberTwo = 1
+operator = 1
 score = 0
-NAME = ""
+name = ""
 
 def add(x, y):
 
@@ -20,33 +20,33 @@ def multiply(x, y):
 
    return x * y
 
-while NAME == "":
+while name == "":
    time.sleep(1)
-   NAME = input("Hello, \nWhat is your name? ")
+   name = input("Hello, \nWhat is your name? ")
    
-print("Welcome to this maths quiz", NAME, "Good luck")
+print("Welcome to this maths quiz", name, "Good luck")
 time.sleep(1)
 print("Please only type numbers as answers or this will crash the quiz")
 
 time.sleep(1)
 
 while question <= 10:
-    number1 = random.randint(0, 12)
-    number2 = random.randint(0, 12)
+    numberOne = random.randint(0, 12)
+    numberTwo = random.randint(0, 12)
     operator = random.randint(1, 3)
     if operator == 1:
-       print(number1,"+",number2)
+       print(numberOne,"+",numberTwo)
     elif operator == 2:
-      print(number1,"-",number2)
+      print(numberOne,"-",numberTwo)
     elif operator == 3:
-      print(number1,"*",number2)
+      print(numberOne,"*",numberTwo)
 
     if operator == 1:
-       ans = add(number1,number2)
+       ans = add(numberOne,numberTwo)
     elif operator == 2:
-      ans = subtract(number1,number2)
+      ans = subtract(numberOne,numberTwo)
     elif operator == 3:
-      ans = multiply(number1,number2)
+      ans = multiply(numberOne,numberTwo)
 
     answer = int(input())
     

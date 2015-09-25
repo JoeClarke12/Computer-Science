@@ -6,6 +6,7 @@ number1 = 1
 number2 = 1
 o = 1
 score = 0
+NAME = ""
 
 def add(x, y):
 
@@ -19,7 +20,6 @@ def multiply(x, y):
 
    return x * y
 
-NAME = input("Hello, \nWhat is your name? ")
 while NAME == "":
    time.sleep(1)
    NAME = input("Hello, \nWhat is your name? ")

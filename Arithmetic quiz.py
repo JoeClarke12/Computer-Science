@@ -20,13 +20,19 @@ def multiply(x, y):
    return x * y
 
 NAME = input("Hello, \nWhat is your name? ")
+while NAME == "":
+   time.sleep(1)
+   NAME = input("Hello, \nWhat is your name? ")
+   
 print("Welcome to this maths quiz", NAME, "Good luck")
+time.sleep(1)
+print("Please only type numbers as answers or this will crash the quiz")
 
 time.sleep(1)
 
 while question <= 10:
-    number1 = random.randint(0, 101)
-    number2 = random.randint(0, 101)
+    number1 = random.randint(0, 12)
+    number2 = random.randint(0, 12)
     operator = random.randint(1, 3)
     if operator == 1:
        print(number1,"+",number2)
@@ -45,10 +51,10 @@ while question <= 10:
     answer = int(input())
     
     if answer == ans:
-        print("correct")
+        print("Correct")
         score = score + 1
     else:
-        print("false, the answer was actually", ans)
+        print("False, the answer was actually", ans)
         
 
     question = question + 1

@@ -23,7 +23,7 @@ def multiply(x, y):
 while name == "":
    time.sleep(1)
    name = input("Hello, \nWhat is your name? ")
-   
+
 print("Welcome to this maths quiz", name, "Good luck")
 time.sleep(1)
 print("Please only type numbers as answers or this will crash the quiz")
@@ -49,13 +49,13 @@ while question <= 10:
       ans = multiply(numberOne,numberTwo)
 
     answer = int(input())
-    
+
     if answer == ans:
         print("Correct")
         score = score + 1
     else:
         print("False, the answer was actually", ans)
-        
+
 
     question = question + 1
 

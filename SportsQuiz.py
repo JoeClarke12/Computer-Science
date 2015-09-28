@@ -50,7 +50,7 @@ else:
     print("False")
     time.sleep(1)
     print("It was actually Ice Hockey")
-    
+
 time.sleep(2)
 print("Question 3")
 Q3 = input("Who has won cricket world cup for the maxium number of times? ")
@@ -78,7 +78,7 @@ else:
     print("False")
     time.sleep(1)
     print("It was actually Brazil")
-    
+
 time.sleep(2)
 print("Question 5")
 Q5 = input("Which country has hosted Commonwealth Games for the maximum number of times? ")
@@ -106,7 +106,7 @@ else:
     print("False")
     time.sleep(1)
     print("It was actually Canada")
-    
+
 time.sleep(2)
 print("Question 7")
 Q7 = input("Which country started the Football World? ")
@@ -120,7 +120,7 @@ else:
     print("False")
     time.sleep(1)
     print("It was actually Uruguay")
-    
+
 time.sleep(2)
 print("Question 8")
 Q8 = input("Bandy is national sport of which country? ")
@@ -166,7 +166,7 @@ else:
 
 time.sleep(2)
 if Score <= 5:
-    
+
     print("Unfortunatly", NAME, "Your score is\n", Score, "/10")
 else:
     print("Congratulations", NAME, "Your score is\n", Score, "/10")

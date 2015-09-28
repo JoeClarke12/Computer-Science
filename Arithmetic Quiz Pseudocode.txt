@@ -19,3 +19,4 @@ OUTPUT welcome message with name;
     OUTPUT inncorrect message;
 
   counter + 1;
+END;

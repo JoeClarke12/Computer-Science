@@ -1,3 +1,5 @@
+
+```
 START
   INPUT NAME;
     WHILE name IS empty:
@@ -22,3 +24,4 @@ OUTPUT welcome message with name;
   
 PRINT score with well done message;
 END;
+```

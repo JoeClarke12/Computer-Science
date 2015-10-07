@@ -51,38 +51,62 @@ print("Please only type numbers as answers or this will crash the quiz")
 #adds a 1 second delay to the program at this stage
 time.sleep(1)
 
+#start of the while loop so it will ask 10 random questions
 while question <= 10:
+   #generating first random number
     number1 = random.randint(0, 12)
+    #generating second random number
     number2 = random.randint(0, 12)
+    #generating random number for selecting random operator
     operator = random.randint(1, 3)
+    #when the operator number is one runs the indented code
     if operator == 1:
+       #prints the correct question depending on the operator selected
        print(number1,"+",number2)
+       #when the operator number is two runs the indented code
     elif operator == 2:
+       #prints the correct question depending on the operator selecte
       print(number1,"-",number2)
+      #when the operator number is three runs the indented code
     elif operator == 3:
+       #prints the correct question depending on the operator selecte
       print(number1,"*",number2)
+      
 
+      #when the operator number is one runs the indented code
     if operator == 1:
+       #works out the correct answer for adding
        ans = add(number1,number2)
+       #when the operator number is one runs the indented code
     elif operator == 2:
+       #works out the correct answer for subtracting
       ans = subtract(number1,number2)
+      #when the operator number is one runs the indented code
     elif operator == 3:
+       #works out the correct answer for multiply
       ans = multiply(number1,number2)
 
+   #taking the users input for there answer
     answer = int(input())
-    
+
+    #check if the users answer matches the answer worked out by the program
     if answer == ans:
+       #printing correct if the answer they put matched the answer worked out by the computer
         print("Correct")
+        #adding 1 to there total score if they got the answer correct
         score = score + 1
     else:
+       #telling the user there answer was false and telling them the correct answer
         print("False, the answer was actually", ans)
-        
 
+      #adding 1 to the questions asked so that the program only asks the right amount of questions
     question = question + 1
 
 
 if score < 5:
+   #printing a message of unfortunate with there score if there score is less than 5
    print("Unfortunatly your score was", score)
 
 else:
+   #printing a message of congradulations with there score if there score isn't less than 5
    print("Amazing, your score was", score)

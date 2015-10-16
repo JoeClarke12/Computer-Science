@@ -71,7 +71,7 @@ while question <= 10:
     elif operator == 3:
        #prints the correct question depending on the operator selecte
       print(number1,"*",number2)
-      
+
 
       #when the operator number is one runs the indented code
     if operator == 1:

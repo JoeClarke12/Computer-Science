@@ -30,7 +30,7 @@ while NAME == "":
 clas = input("Please enter your class: ")
 if clas == 'A' or 'a':
    file = open("Class A results", 'a')
-   
+
 print("Welcome to this maths quiz", NAME, "Good luck")
 time.sleep(1)
 print("Please only type numbers as answers or this will crash the quiz")
@@ -54,7 +54,7 @@ while question <= 10:
       ans = multiply(number1,number2)
 
     answer = int(input())
-    
+
     if answer == ans:
         print("Correct")
         score = score + 1

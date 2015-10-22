@@ -21,7 +21,7 @@ OUTPUT welcome message with name;
     OUTPUT inncorrect message;
 
   counter + 1;
-  
+
 PRINT score with well done message;
 END;
 ```

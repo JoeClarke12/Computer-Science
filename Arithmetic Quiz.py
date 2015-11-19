@@ -34,7 +34,7 @@ def multiply(x, y):
 
    return x * y
 
-#To see if user has entered name a name
+#To see if user has entered a name into the input
 while NAME == "":
    #adds a 1 second delay to the program at this stage
    time.sleep(1)

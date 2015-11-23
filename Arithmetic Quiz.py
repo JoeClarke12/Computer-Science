@@ -18,6 +18,10 @@ number2 = 1
 score = 0
 #Variable to hold the users name
 NAME = ""
+Class = ""
+ClassOne = ""
+ClassTwo = ""
+ClassThree = ""
 
 #Used to calculate the correct answer for addition questions
 def add(x, y):
@@ -34,12 +38,17 @@ def multiply(x, y):
 
    return x * y
 
-#To see if user has entered a name into the input
+#To see if user has entered name a name
 while NAME == "":
    #adds a 1 second delay to the program at this stage
    time.sleep(1)
    #Asks for the users name, if the user doesn't enter a name it will start the loop again
    NAME = input("Hello, \nWhat is your name? ")
+
+WhichClass = input("What class are you in; A, B or C? ")
+
+
+
 
 #prints a welcome message with ther users name, if the user has entered a name
 print("Welcome to this maths quiz", NAME, "Good luck")
@@ -53,6 +62,7 @@ time.sleep(1)
 
 #start of the while loop so it will ask 10 random questions
 while question <= 10:
+    time.sleep(1)
    #generating first random number
     number1 = random.randint(0, 12)
     #generating second random number
@@ -71,7 +81,7 @@ while question <= 10:
     elif operator == 3:
        #prints the correct question depending on the operator selecte
       print(number1,"*",number2)
-
+      
 
       #when the operator number is one runs the indented code
     if operator == 1:
@@ -87,7 +97,9 @@ while question <= 10:
       ans = multiply(number1,number2)
 
    #taking the users input for there answer
-    answer = int(input())
+    answer = int(input("Enter your answer here: "))
+
+    time.sleep(1)
 
     #check if the users answer matches the answer worked out by the program
     if answer == ans:
@@ -102,6 +114,31 @@ while question <= 10:
       #adding 1 to the questions asked so that the program only asks the right amount of questions
     question = question + 1
 
+if WhichClass == "A" or "a":
+   ClassOne = open("Class One.txt","a") #opens the class one text document
+   time.sleep(1)                       #pauses the program for one second
+   ClassOne.write("\n")                #writes a blank line to the text file
+   ClassOne.write(NAME)                #writes the name variable to the text file 
+   ClassOne.write(":")                 #writes a colon to the text file
+   ClassOne.write(str(score))          #writes the score variable as a string to the text file
+   ClassOne.close()                    #closes the text file
+elif WhichClass == "B" or "b":
+   ClassTwo = open("Class Two.txt","a") #opens the class one text document
+   time.sleep(1)                       #pauses the program for one second
+   ClassTwo.write("\n")                #writes a blank line to the text file
+   ClassTwo.write(NAME)                #writes the name variable to the text file 
+   ClassTwo.write(":")                 #writes a colon to the text file
+   ClassTwo.write(str(score))          #writes the score variable as a string to the text file
+   ClassTwo.close()                    #closes the text file
+
+elif WhichClass == "C" or "c":
+   ClassThree = open("Class Three.txt","a") #opens the class one text document
+   time.sleep(1)                       #pauses the program for one second
+   ClassThree.write("\n")                #writes a blank line to the text file
+   ClassThree.write(NAME)                #writes the name variable to the text file 
+   ClassThree.write(":")                 #writes a colon to the text file
+   ClassThree.write(str(score))          #writes the score variable as a string to the text file
+   ClassThree.close()                    #closes the text file
 
 if score < 5:
    #printing a message of unfortunate with there score if there score is less than 5
@@ -110,3 +147,5 @@ if score < 5:
 else:
    #printing a message of congradulations with there score if there score isn't less than 5
    print("Amazing, your score was", score)
+    
+

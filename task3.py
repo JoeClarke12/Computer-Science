@@ -1,6 +1,5 @@
 import csv
-print('1 for Class A\n2 for Class B\n3 for Class C')
-chosen = int(input())
+chosen = int(input('1 for Class A\n2 for Class B\n3 for Class C'))
 
 if chosen == 1:
     class_a = open('Class_A_Results.txt')

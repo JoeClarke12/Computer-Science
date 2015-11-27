@@ -22,10 +22,10 @@ if chosen == 1:
             a_list.append(row[0:9])
         if cho_two == 1:
             alphabetical = [[x[0],x[6]] for x in a_list]
-            print('\nCLASS A\N Each nstudent highest by alpabetical order\n')
+            print('\nCLASS A\n Each nstudent highest by alpabetical order\n')
             for alpha_order in sorted(alphabetical):
                 print(alpha_order)
-            elif cho_town == 1:
+            elif cho_two == 1:
                 alphabetical = [[x[0],x[6]] for x in a_list]
                 print('\nCLASS A\nEach student highest score to lowest\n')
                 for high_scr in sorted(high_score,reverse = True):

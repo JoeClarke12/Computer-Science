@@ -23,6 +23,7 @@ Class = ""
 ClassOne = ""
 ClassTwo = ""
 ClassThree = ""
+WhichMode = 0
 
 #Used to calculate the correct answer for addition questions
 def add(x, y):
@@ -50,7 +51,7 @@ while WhichClass = "":
     time.sleep(1)
     WhichClass = input("What class are you in; A, B or C? ")
 
-while WhichClass = 0:
+while WhichMode = 0:
     time.sleep(1)
     WhichMode = input("How would you like the class sorted?\n1. Alphabetical\n2. Highest to lowest\n3. Average Highest to lowest")
 

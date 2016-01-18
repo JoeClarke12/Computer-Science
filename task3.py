@@ -1,37 +1,71 @@
 import csv
-chosen = int(input('1 for Class A\n2 for Class B\n3 for Class C'))
 
-if chosen == 1:
-    class_a = open('Class_A_Results.txt')
-    print('1 for alphabetical orderwith each students highest score\n2 for highest score, Highest to lowest\n3 for average score, Highest to lowest')
-    cho_two=int(input())
-    csv_a = csv.reader(class_a)
-    a_list = []
-    for row in csv_a:
-        if row:
-            row[1] = int(row[1])
-            row[2] = int(row[2])
-            row[3] = int(row[3])
-            minimum = min(row[1:3])
-            row.append(minimum)
-            maximun = max(row[1:3])
-            row.append(maximum)
-            average = sum(row[1:3])//3
-            row.append(average)
-            a_list.append(row[0:9])
-        if cho_two == 1:
-            alphabetical = [[x[0],x[6]] for x in a_list]
-            print('\nCLASS A\n Each nstudent highest by alpabetical order\n')
-            for alpha_order in sorted(alphabetical):
-                print(alpha_order)
-            elif cho_two == 1:
-                alphabetical = [[x[0],x[6]] for x in a_list]
-                print('\nCLASS A\nEach student highest score to lowest\n')
-                for high_scr in sorted(high_score,reverse = True):
-                    print(high_scr)
-            elif cho_two == 3:
-                average_score = [[x[6],x[0]] for x in a_list]
-                print('\nCLASS A\nThe average score from the highest to lowest\n')
-                for ave_scr in sorted(average_score,reverse = True):
-                    print(ave_scr)
-        class_a.close()
+#-- Links the TempByMonth file object and stores it in a variable [f]ile 
+f = open('classone.csv')
+#-- csv_f will allow us to iterate over the given .csv file i.e. read the data
+csv_f = csv.reader(f)
+
+#-- Create an empty list to store the data from the file.
+newlist = []
+
+
+#Iterating through the csv data
+for row in csv_f:
+
+    #Convert the string values into integers
+    row[1] = int(row[1])
+    row[2] = int(row[2])
+    row[3] = int(row[3])
+    row[4] = int(row[4])
+
+    #Finds the lowest temp for each month
+    minimum = min(row[1:4])
+
+    #Adds it to the list
+    row.append(minimum)
+
+    #Finds the lowest temp for each month
+    maximum = max(row[1:4])
+
+    #Adds it to the list
+    row.apendmaximum)
+
+    #Calculate the average of the 4 temperatures and rounds to nearest whole no
+    average = round(sum(row[1:4])/4)
+
+    #Adding it to a list
+    row.append(average)
+
+    #adding each row to the newlist - [0:6] the range of items on each row
+    newlist.append(row[0:8])
+    
+#test the data in our list
+print(newlist)
+
+#--Sorting the data: lowest temp by month--
+
+#Create a new list to store selected items from our previous list (newlist)
+#Remember to put the data to be sorted in position [0]
+lowTemp = [[x[5], x[0]] for x in newlist]
+
+print('\nAverage Score \n')
+
+#iterate through lowTemp and sort based on [0]
+for entry in sorted(lowTemp):
+    print(entry)
+
+
+#--Sorting the data: Highest average temp by month--
+
+#Create a new list to store selected items from our previous list (newlist)
+averageTemp = [[x[7], x[0]] for x in newlist]
+
+print('\nHighest Average Score \n')
+
+#iterate through lowTemp and sort based on [0]
+for entry in sorted(averageTemp, reverse = True):
+    print(entry)
+
+
+
+

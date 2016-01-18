@@ -22,6 +22,7 @@ Class = ""
 ClassOne = ""
 ClassTwo = ""
 ClassThree = ""
+sort = 0
 
 #Used to calculate the correct answer for addition questions
 def add(x, y):
@@ -46,12 +47,14 @@ while NAME == "":
    NAME = input("Hello, \nWhat is your name? ")
 
 WhichClass = input("What class are you in; A, B or C? ")
+print("This class doesn't exist")
+time.sleep(10)
+
+sort = int(input("How should itbe sorted? \n 1 - Average \n 2 - Highest Average"))
+time.sleep(1)
 
 
 
-
-#prints a welcome message with ther users name, if the user has entered a name
-print("Welcome to this maths quiz", NAME, "Good luck")
 #adds a 1 second delay to the program at this stage
 time.sleep(1)
 #printing a message so that the user know to put only numbers in the answer box
@@ -114,14 +117,15 @@ while question <= 10:
       #adding 1 to the questions asked so that the program only asks the right amount of questions
     question = question + 1
 
-if WhichClass == "A" or "a":
+if WhichClass == "A" or "a:
    ClassOne = open("Class One.txt","a") #opens the class one text document
    time.sleep(1)                       #pauses the program for one second
    ClassOne.write("\n")                #writes a blank line to the text file
    ClassOne.write(NAME)                #writes the name variable to the text file 
    ClassOne.write(":")                 #writes a colon to the text file
    ClassOne.write(str(score))          #writes the score variable as a string to the text file
-   ClassOne.close()                    #closes the text file
+   ClassOne.close()
+   f = open('classone.csv')
 elif WhichClass == "B" or "b":
    ClassTwo = open("Class Two.txt","a") #opens the class one text document
    time.sleep(1)                       #pauses the program for one second
@@ -130,7 +134,7 @@ elif WhichClass == "B" or "b":
    ClassTwo.write(":")                 #writes a colon to the text file
    ClassTwo.write(str(score))          #writes the score variable as a string to the text file
    ClassTwo.close()                    #closes the text file
-
+   f = open('classtwo.csv')
 elif WhichClass == "C" or "c":
    ClassThree = open("Class Three.txt","a") #opens the class one text document
    time.sleep(1)                       #pauses the program for one second
@@ -139,7 +143,9 @@ elif WhichClass == "C" or "c":
    ClassThree.write(":")                 #writes a colon to the text file
    ClassThree.write(str(score))          #writes the score variable as a string to the text file
    ClassThree.close()                    #closes the text file
+   f = open('classthree.csv')
 
+    
 if score < 5:
    #printing a message of unfortunate with there score if there score is less than 5
    print("Unfortunatly your score was", score)
